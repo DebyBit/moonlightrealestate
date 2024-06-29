@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>Moon Light Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- External CSS libraries -->
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery.selectBox.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/dropzone.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/rangeslider.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/leaflet.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/slick.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/slick-theme.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/map.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" >
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="assets/css/skins/default.css">
+	
+	<script src="assets/js/jquery-2.2.0.min.js"></script>
+	 <script>
+    $(function(){
+	
+	footlinklead()
+	
+		function headlead() {
+		  return new Promise((resolve, reject) => {
+			resolve($("#headBrunch").load("_head.html"))
+		  });
+		}
+		async function footlead() {
+		  await headlead()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footBrunch").load("_foot.html"))
+		  });
+		}
+		async function footlinklead() {
+		  await footlead()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footLink").load("_footlink.html"))
+		  });
+		}
+		
+		async function phasereaveal() {
+		  await footlinklead()
+		  return new Promise((resolve, reject) => {
+			setTimeout(() => {
+			//resolve( document.querySelector(".page_loader").style.display = "none")
+			}, 3000);
+		  });
+		}
+    });
+  </script>
+
+</head>
+<body id="top" class="index-body">
+
+<div class="page_loader"></div>
+
+<div id="headBrunch"></div>
+
+<!-- Banner start -->
+<div class="banner" id="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active item-bg">
+                <img class="d-block w-100 h-100" src="assets/img/banner/img-3.jpg" alt="banner">
+                <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+                    <div class="carousel-content container b1-inner-2">
+                        <div class="t-center">
+                            <h5 data-animation="animated fadeInDown delay-05s">Discover Your Dream Property Today</h5>
+                            <h1 data-animation="animated fadeInDown delay-05s">Explore New Zealand Best Real Estate Options Here</h1>
+                            <a data-animation="animated fadeInUp delay-10s" href="about.html" class="btn btn-2 btn-theme"><span>More Details</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item item-bg">
+                <img class="d-block w-100 h-100" src="assets/img/banner/img-2.jpg" alt="banner">
+                <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+                    <div class="carousel-content container b1-inner-2">
+                        <div class="t-right">
+                            <h5 data-animation="animated fadeInDown delay-05s">Find Your Next Property In Paradise!</h5>
+                            <h1 data-animation="animated fadeInDown delay-05s">Experience the Best of New Zealand Living</h1>
+                            <a data-animation="animated fadeInUp delay-10s" href="about.html" class="btn btn-2 btn-theme"><span>More Details</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item item-bg">
+                <img class="d-block w-100 h-100" src="assets/img/banner/img-4.jpg" alt="banner">
+                <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
+                    <div class="carousel-content container b1-inner-2">
+                        <div class="t-left">
+                            <h5 data-animation="animated fadeInDown delay-05s">Get The Best Real Estate Deals Here!</h5>
+                            <h1 data-animation="animated fadeInDown delay-05s">Start Your Real Estate Journey in New Zealand</h1>
+                            <a data-animation="animated fadeInUp delay-10s" href="about.html" class="btn btn-2 btn-theme"><span>More Details</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-secton">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- banner end -->
+
+<!-- Search area start -->
+<div class="search-area" id="search-area-1">
+    <div class="container">
+        <div class="search-area-inner" style="display:none;">
+            <div class="search-contents ">
+                <form action="index.html" method="GET">
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="area">
+                                    <option>Area From</option>
+                                    <option>1500</option>
+                                    <option>1200</option>
+                                    <option>900</option>
+                                    <option>600</option>
+                                    <option>300</option>
+                                    <option>100</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="property-status">
+                                    <option>Property Status</option>
+                                    <option>For Sale</option>
+                                    <option>For Rent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="location">
+                                    <option>Location</option>
+                                    <option>United Kingdom</option>
+                                    <option>American Samoa</option>
+                                    <option>Belgium</option>
+                                    <option>Canada</option>
+                                    <option>Delaware</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="category">
+                                    <option>Property Types</option>
+                                    <option>Residential</option>
+                                    <option>Commercial</option>
+                                    <option>Land</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="bedrooms">
+                                    <option>Bedrooms</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="bathrooms">
+                                    <option>Bathrooms</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <div class="range-slider">
+                                    <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="form-group">
+                                <button class="btn btn-4 btn-block" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search area end -->
+
+<!-- Featured properties start -->
+<div class="featured-properties content-area-2">
+    <div class="container">
+        <div class="main-title">
+            <h1>Featured Properties</h1>
+            <ul class="list-inline-listing filters filteriz-navigation" style="display:none;">
+                <li class="active btn filtr-button filtr" data-filter="all">All</li>
+                <li data-filter="1" class="btn btn-inline filtr-button filtr">Apartment</li>
+                <li data-filter="2" class="btn btn-inline filtr-button filtr">House</li>
+                <li data-filter="3" class="btn btn-inline filtr-button filtr">Office</li>
+            </ul>
+        </div>
+        <div class="row filter-portfolio wow fadeInUp delay-04s">
+            <div id="featuresProducts" class="cars">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured properties end -->
+
+<!-- Services 2 start -->
+<div class="services-2 overview-bgi">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 align-self-center wow fadeInLeft delay-04s">
+                <div class="main-title main-title-2">
+                    <h1>Our Goal For You</h1>
+                    <p>To be your go-to real estate agency in New Zealand by offering an unmatched level of service and professionalism that exceeds expectations at every turn. We strive to build long-term relationships with you through continued support even after their purchase or sale has been completed.</p>
+                    <a href="about.html" class="important-btn btn-5">More Details</a>
+                </div>
+            </div>
+            <div class="col-lg-7 offset-lg-1 wow fadeInRight delay-04s">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="services-info">
+                            <div class="number">1</div>
+                            <div class="icon">
+                                <i class="flaticon-hotel-building"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="services.html">3D Walkthroughs</a>
+                                </h3>
+                                <p>We showcase properties with high-quality photos but also include video tours or 3D walkthroughs if possible so customers can get a real feel for what each property has to offer before making an appointment for viewing it in person </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="services-info">
+                            <div class="number">2</div>
+                            <div class="icon">
+                                <i class="flaticon-house"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="services.html">Personalized Solutions</a>
+                                </h3>
+                                <p>We understand that every client's needs are unique; therefore we tailor our services specifically for each individual case. Our approach is personalized with a focus on providing an exceptional experience from start to finish</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="services-info">
+                            <div class="number">3</div>
+                            <div class="icon">
+                                <i class="flaticon-call-center-agent"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="services.html">Dedicated Support Team</a>
+                                </h3>
+                                <p>Our team goes above and beyond by providing detailed information on all aspects of the transaction as well as working closely with all parties involved in order to ensure everything runs smoothly from start to finish.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="services-info">
+                            <div class="number">4</div>
+                            <div class="icon">
+                                <i class="flaticon-office-block"></i>
+                            </div>
+                            <div class="detail">
+                                <h3>
+                                    <a href="services.html">Research the current market</a>
+                                </h3>
+                                <p>We conduct research on what type of properties sell quickly, which areas have high demand, and identify common pain points experienced by home buyers or renters. This will help us to tailor our services to you accordingly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services 2 end -->
+
+<!-- Recent Properties start -->
+<div class="recent-properties content-area-2">
+    <div class="container">
+        <div class="main-title">
+            <h1>Recent Properties</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+        </div>
+        <div id="forSaleProperties" class="row">
+            
+        </div>
+    </div>
+</div>
+<!-- Recent Properties end -->
+
+
+<div id="footBrunch"></div>
+<div id="footLink"></div>
+</body>
+</html>
+<script  src="assets/js/home.js"></script>
