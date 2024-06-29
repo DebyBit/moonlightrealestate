@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>Moon Light Limited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- External CSS libraries -->
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery.selectBox.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/dropzone.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/rangeslider.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/leaflet.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/slick.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/slick-theme.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/map.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/fonts/flaticon/font/flaticon.css">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" >
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+    <!-- Custom Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="assets/css/skins/default.css">
+	
+	<script src="assets/js/jquery-2.2.0.min.js"></script>
+	 <script>
+    $(function(){
+	
+	footlinklead()
+	
+		function headlead() {
+		  return new Promise((resolve, reject) => {
+			resolve($("#headBrunch").load("_head.html"))
+		  });
+		}
+		async function footlead() {
+		  await headlead()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footBrunch").load("_foot.html"))
+		  });
+		}
+		async function footlinklead() {
+		  await footlead()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footLink").load("_footlink.html"))
+		  });
+		}
+		
+		async function phasereaveal() {
+		  await footlinklead()
+		  return new Promise((resolve, reject) => {
+			setTimeout(() => {
+			//resolve( document.querySelector(".page_loader").style.display = "none")
+			}, 3000);
+		  });
+		}
+    });
+  </script>
+
+</head>
+<body id="top" class="index-body">
+
+<div class="page_loader"></div>
+
+<div id="headBrunch"></div>
+
+<!-- Sub banner start -->
+<div class="sub-banner">
+    <div class="container">
+        <div class="breadcrumb-area">
+            <h1>Contact Us</h1>
+            <ul class="breadcrumbs">
+                <li><a href="./">Home</a></li>
+                <li class="active">Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub banner end -->
+
+<!-- Contact 2 start -->
+<div class="contact-2 content-area-2">
+    <div class="container">
+        <div class="main-title">
+            <h1>Contact Us</h1>
+            <p></p>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 contact-info">
+                    <i class="fa fa-map-marker"></i>
+                    <h5>Office Address</h5>
+                    <p>20/F Green Road, Dhaka</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 contact-info">
+                    <i class="fa fa-phone"></i>
+                    <h5>Phone Number</h5>
+                    <p>+55 417 634 7X71</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 contact-info">
+                    <i class="fa fa-envelope"></i>
+                    <h5>Email Address</h5>
+                    <p>enquiry@moonlighltd.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 contact-info">
+                    <i class="fa fa-fax"></i>
+                    <h5>Fax</h5>
+                    <p>+55 417 634 7X71</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- Contact 2 end -->
+
+<div id="footBrunch"></div>
+<div id="footLink"></div>
+</body>
+</html>
